@@ -1,8 +1,11 @@
+body{
+  background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);
+}
+
 img{
   width: 60%;
   align-self: center;
 }
-
 .card{
   border: rgb(103, 102, 105) 3px solid;
   display: flex;  
@@ -11,6 +14,7 @@ img{
   margin-right:5%;
   margin-top: 1%;
   margin-bottom: 1%;
+
 }
 
 .row{
@@ -34,7 +38,7 @@ img{
 
 .title{
   font-size: 20px;
-  background-color: rgb(97, 64, 128);
+  background-color: rgb(17, 161, 180);
   color: white;
   text-align: center;
   margin:20px;
@@ -118,9 +122,12 @@ img{
 .img_icon {
   align-self: center;
     width:40px;
-    background-color:#0C9;
+    background-color:rgb(83, 93, 233);
     color:#FFF;
     border-radius:50px;
     text-align:center;
     box-shadow: 2px 2px 3px #999;  
+}
+.container-contact{
+  background-color: transparent;
 }
