@@ -63,7 +63,10 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             # code to recognise the frontend of static files
-            os.path.join(BASE_DIR, 'frontend/static')
+            os.path.join(BASE_DIR, 'frontend/static'),
+            os.path.join(BASE_DIR, 'frontend/build'),
+            os.path.join(BASE_DIR, 'frontend/build/static')
+
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -140,5 +143,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # This command is used to gather static files from various locations in your project and store them in a single location that can be served by the web server in production.
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'frontend/static'),
+    os.path.join(BASE_DIR,'frontend/build'),
+    os.path.join(BASE_DIR,'frontend/build/static')
 ]
 
