@@ -45,7 +45,28 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
 ]
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',  # Example: Allow requests from localhost on port 3000
+    'http://127.0.0.1:3000',   # Example: Allow requests from 127.0.0.1 on port 3000
+    # Add more origins as needed
+]
+
+
+# Optional: Allow all headers
+CORS_ALLOW_ALL_HEADERS = True
+
+# Optional: Allow all methods (GET, POST, etc.)
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -54,6 +75,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'djangoproj.urls'
@@ -65,7 +87,7 @@ TEMPLATES = [
             # code to recognise the frontend of static files
             os.path.join(BASE_DIR, 'frontend/static'),
             os.path.join(BASE_DIR, 'frontend/build'),
-            os.path.join(BASE_DIR, 'frontend/build/static')
+            os.path.join(BASE_DIR, 'frontend/build/static'),
 
         ],
         'APP_DIRS': True,
@@ -144,6 +166,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'frontend/static'),
     os.path.join(BASE_DIR,'frontend/build'),
-    os.path.join(BASE_DIR,'frontend/build/static')
+    os.path.join(BASE_DIR,'frontend/build/static'),
 ]
 
