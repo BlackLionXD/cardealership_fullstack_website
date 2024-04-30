@@ -10,6 +10,7 @@ urlpatterns = [
     # path for login
     path(route='login', view=views.login_user, name='login'),
     path('logout', views.logout_request, name='logout'),  # This maps the URL '/djangoapp/logout' to the logout_request view
+    path('register/', views.registration, name='register'),
     # path for dealer reviews view
 
     # path for add a review view
